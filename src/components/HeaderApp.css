@@ -1,0 +1,28 @@
+/* ========== Style Ion-Header ======== */
+
+.head{
+    display: flexbox;
+    text-align: center;
+}
+
+ion-toolbar{
+    --color: #ffffff;
+    --background: black;
+    --border: none;
+}   
+
+.logo{
+    height: 4rem;
+    display: inline-flex;
+    text-align: center;
+}
+
+.bag{
+    --color: rgb(255, 255, 255);
+    position:fixed;
+    margin-left: auto;
+    right: 0;
+    margin-right: 15px;
+}
+
+/* ========== End Style Ion-Header ======== */

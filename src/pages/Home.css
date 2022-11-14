@@ -1,0 +1,45 @@
+/* ======== UNIVERSAL FORMAT ========= */
+
+.body{
+    width: 95%;
+    margin: auto;
+}
+
+/* ======== END UNIVERSAL FORMAT ======== */
+
+/* ======== STYLE OF HEAD SECTION ========= */
+
+.SectionHead{
+    margin-top: 10px;
+}
+/* ======== END STYLE OF HEAD SECTION ========= */
+
+/* ====== IMAGES OF WIDTH FULL ========= */
+
+.imgF{
+    margin: auto;
+}
+
+/* ====== END IMAGES OF WIDTH FULL ========= */
+
+/* ====== ION BUTTONS ========= */
+
+ion-button{
+    --color: black;
+    --color-hover: white;
+    --border-color:black;
+    --background-hover:rgb(0, 0, 0) ;
+    --background-hover-opacity: 100%;
+    --background-activated:black ;
+    --background-activated-opacity: 100%;
+}
+
+/* ====== END ION BUTTONS ========= */
+
+/* ====== STYLE OF TOP SEASSON ========= */
+
+.TopTemp{
+    text-align: center;
+}
+
+/* ====== STYLE OF TOP SEASSON ========= */

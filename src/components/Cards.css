@@ -1,0 +1,10 @@
+ion-card{
+    display:block;
+    width: 100%;
+    height: auto;
+}
+
+ion-card > img{
+    width: 100%;
+    height: auto;
+}

@@ -8,11 +8,11 @@ import './HeaderApp.css';
 
 export const HeaderApp: React.FC = () => {
     return (
-        <IonHeader class="ion-no-border">
+        <IonHeader class="ion-no-border" translucent>
             <IonToolbar>
                 <div className='head'>
                     <span className='logo'>
-                        <IonImg src='/assets/Images/PNG/Logo-White.png' alt='Rony Boutique' className='Logo'></IonImg>
+                        <IonImg src='/assets/Images/PNG/Logo-Black.png' alt='Rony Boutique' className='Logo'></IonImg>
                     </span>
                     <span className='icon'>
                        <IonTabButton className="bag" href="/Bag">

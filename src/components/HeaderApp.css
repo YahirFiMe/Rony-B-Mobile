@@ -7,7 +7,7 @@
 
 ion-toolbar{
     --color: #ffffff;
-    --background: black;
+    --background: rgb(255, 255, 255);
     --border: none;
 }   
 
@@ -15,10 +15,11 @@ ion-toolbar{
     height: 4rem;
     display: inline-flex;
     text-align: center;
+    margin-top: 30px;
 }
 
 .bag{
-    --color: rgb(255, 255, 255);
+    --color: rgb(0, 0, 0);
     position:fixed;
     margin-left: auto;
     right: 0;

@@ -1,7 +1,5 @@
 import { IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent } from "@ionic/react";
-import { construct } from "ionicons/icons";
-import { stringify } from "querystring";
-import React from "react";
+import { Api } from "../API/Api";
 import './Cards.css';
 
 
@@ -15,7 +13,9 @@ type CardProps  = {
 
 const Card = (props: CardProps) => {
     return (
-        <IonCard button>
+        <IonCard button onClick={() =>{
+            
+        }}>
             <img alt="Silhouette of mountains" src={props.src} />
             <IonCardHeader>
                 <IonCardTitle>{props.title}</IonCardTitle>

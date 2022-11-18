@@ -3,20 +3,17 @@ import { useState } from "react";
 import Card from "./Cards";
 
 type Item = {
-    Item: any[];
+    item: any[];
 }
 
-const ListItems = ({ Item }: Item) => {
+const ListItems = ({ item }: Item) => {
 
 
     return (
         <IonList lines='full'>
-            {Item.map((Item: {
-                description: string;
-                price: string; name: string; id: number;
-            }) => (
-                <IonItem key={Item.id}>
-                    <Card title={Item.name} subtitle={'$' + Item.price} text={Item.description}
+            {item.map((item) => (
+                <IonItem key={item.id}>
+                    <Card title={item.name} subtitle={'$' + item.price} text={item.description} id={item.id}
                         src='https://ss251.liverpool.com.mx/sm/1123336172.jpg' />
                 </IonItem>
             ))}

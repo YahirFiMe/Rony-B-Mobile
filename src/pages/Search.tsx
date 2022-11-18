@@ -1,91 +1,36 @@
-import { 
+import {
+  IonBackButton,
   IonButton,
-  IonContent, 
+  IonContent,
   IonHeader,
-  IonInfiniteScroll, 
-  IonInfiniteScrollContent, 
+  IonInfiniteScroll,
+  IonInfiniteScrollContent,
   IonItem,
   IonLabel,
-  IonList,  
-  IonPage, 
-  IonTitle, 
+  IonList,
+  IonPage,
+  IonTitle,
   IonToolbar,
-  useIonViewWillEnter
 } from '@ionic/react';
-import { useState } from 'react';
+
 
 import "./Search.css";
 
 
-const InfiniteScrollExample: React.FC = () => {
-  const [data, setData] = useState<string[]>([]);
-  const [isInfiniteDisabled, setInfiniteDisabled] = useState(false);
-  
-  const pushData = () => {
-    const max = data.length + 20;
-    const min = max - 20;
-    const newData = [];
-    for (let i = min; i < max; i++) {
-      newData.push('Item' + i);
-    }
-    
-    setData([
-      ...data,
-      ...newData
-    ]);
-  }
-  const loadData = (ev: any) => {
-    setTimeout(() => {
-      pushData();
-      console.log('Loaded data');
-      ev.target.complete();
-      if (data.length === 1000) {
-        setInfiniteDisabled(true);
-      }
-    }, 500);
-  }  
-  
-  useIonViewWillEnter(() => {
-    pushData();
-  });
-  
+const Search: React.FC = () => {
+
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Blank</IonTitle>
+         
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <p>dewiufewrfernfbu</p>
-        <IonList>
-          {data.map((item, index) => {
-            return (
-              <IonItem key={index}>
-                <IonLabel>{item}</IonLabel>
-              </IonItem>
-            )
-          })}
-        </IonList>
-        
-        <IonInfiniteScroll
-          onIonInfinite={loadData}
-          threshold="100px"
-          disabled={isInfiniteDisabled}
-        >
-          <IonInfiniteScrollContent
-            loadingSpinner="bubbles"
-            loadingText="Loading more data..."
-          ></IonInfiniteScrollContent>
-        </IonInfiniteScroll>
+      <IonContent>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias repudiandae pariatur iure obcaecati neque reprehenderit. Nemo impedit dignissimos consequatur eius nam, quibusdam maiores repellat recusandae numquam aliquid eos eum in!</p>
       </IonContent>
     </IonPage>
   );
 };
 
-export default InfiniteScrollExample;
+export default Search;

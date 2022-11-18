@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'Test',
+  appId: 'com.Axolot.Rony',
+  appName: 'RonyBoutique',
   webDir: 'build',
   bundledWebRuntime: false
 };

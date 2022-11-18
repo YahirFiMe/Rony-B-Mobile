@@ -1,10 +1,20 @@
 /* ======== UNIVERSAL FORMAT ========= */
+:root{
+    --ion-background-color: white;
+	--ion-text-color: #000000;
+	--ion-text-color-rgb: 0,0,0;
+}
+
 
 .body{
-    width: 95%;
+    width: 90%;
     margin: auto;
 }
 
+
+ion-icon{
+    --color:rgb(0, 0, 0);
+}
 /* ======== END UNIVERSAL FORMAT ======== */
 
 /* ======== STYLE OF HEAD SECTION ========= */
@@ -25,15 +35,15 @@
 /* ====== ION BUTTONS ========= */
 
 ion-button{
-    --color: black;
+    --color: rgb(0, 0, 0);
     --color-hover: white;
+    --color-ativated: white;
     --border-color:black;
     --background-hover:rgb(0, 0, 0) ;
     --background-hover-opacity: 100%;
-    --background-activated:black ;
+    --background-activated:rgb(128, 128, 128) ;
     --background-activated-opacity: 100%;
 }
-
 /* ====== END ION BUTTONS ========= */
 
 /* ====== STYLE OF TOP SEASSON ========= */

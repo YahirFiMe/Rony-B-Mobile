@@ -15,7 +15,7 @@ export const HeaderApp: React.FC = () => {
                         <IonImg src='/assets/Images/PNG/Logo-Black.png' alt='Rony Boutique' className='Logo'></IonImg>
                     </span>
                     <span className='icon'>
-                       <IonTabButton className="bag" href="/Bag">
+                       <IonTabButton className="bag" href="/App/Bag" >
                             <IonIcon icon={bagRemoveOutline} className='bag' size="large"/>
                        </IonTabButton>
                     </span>

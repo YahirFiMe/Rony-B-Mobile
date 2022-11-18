@@ -1,7 +1,6 @@
 /* ========== Style Ion-Header ======== */
 
 .head{
-    display: flexbox;
     text-align: center;
 }
 
@@ -9,13 +8,13 @@ ion-toolbar{
     --color: #ffffff;
     --background: rgb(255, 255, 255);
     --border: none;
+    margin-bottom: 10px;
 }   
 
 .logo{
     height: 4rem;
     display: inline-flex;
-    text-align: center;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .bag{
@@ -26,4 +25,15 @@ ion-toolbar{
     margin-right: 15px;
 }
 
+.BButton{
+    --background-color: none;
+    --background: none;
+}
+
+ion-back-button{
+    margin-top: 30px;
+    --color-hover:gray;
+    --color:black;
+    --background-hover-opacity: 0%;
+}
 /* ========== End Style Ion-Header ======== */

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">RonyBoutique</string>
+    <string name="title_activity_main">RonyBoutique</string>
+    <string name="package_name">com.Axolot.Rony</string>
+    <string name="custom_url_scheme">com.Axolot.Rony</string>
+</resources>

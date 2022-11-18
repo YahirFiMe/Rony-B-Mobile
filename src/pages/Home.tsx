@@ -1,10 +1,10 @@
 import { Api } from '../API/Api';
-import { IonButton, IonContent, IonHeader, IonImg, IonInfiniteScroll, IonInfiniteScrollContent, IonItem, IonList, IonPage, IonTitle, IonToolbar, IonVirtualScroll } from '@ionic/react';
+import { IonButton, IonContent, IonImg, IonItem, IonList, IonNavLink, IonPage, IonRouterOutlet} from '@ionic/react';
 import { useEffect, useState } from 'react';
-import Card from '../components/Cards';
+import Search from '../pages/Search';
 import HeaderApp from '../components/HeaderApp';
 import ListItems from '../components/ListItems';
-import './Home.css';
+import './Universal.css';
 
 
 
@@ -17,26 +17,26 @@ const Home: React.FC = () => {
   useEffect(() => {
     GetItems();
     GetItems2();
-    
   }, [])
 
   const GetItems = () => {
-   Api.get('http://localhost:9000/api/GetProducts/2')
-            .then(res => res.data)
-            .then(res => setItem(res))
+    Api.get('http://192.168.56.1:8080/api/GetProducts/2')
+      .then(res => res.data)
+      .then(res => setItem(res))
   }
 
   const GetItems2 = () => {
-    Api.get('http://localhost:9000/api/GetProducts/2')
-             .then(res => res.data)
-             .then(res => setItem2(res))
-   }
+    Api.get('http://127.0.0.1:8000/api/GetProducts/2')
+      .then(res => res.data)
+      .then(res => setItem2(res))
+  }
 
 
 
   return (
     <IonPage>
       <HeaderApp />
+      
       <IonContent fullscreen>
         <div className='body'>
           <section className='SectionHead'>
@@ -44,11 +44,11 @@ const Home: React.FC = () => {
             <h3><b>COLECCION DE INVIERNO</b></h3>
             <p> Encuenta en RONY BOUTIQUE los mejores estilos de la temporada, abrigos, bufandas,
               sueteres, y gorros en tendencia </p>
-            <IonButton fill='outline' expand='block'><strong>Descubre más</strong></IonButton>
+            <IonButton fill='outline' expand='block' href='/App/Search'><strong>Descubre más</strong></IonButton>
           </section>
           <section className='TopTemp'>
             <p><strong>---TOP DE LA TEMPORADA---</strong></p>
-            <ListItems Item={Item}/>
+            <ListItems item={Item} />
           </section>
           <section>
             <IonImg src='assets/images/resources/Gift.jpg' className='imgF' />
@@ -68,8 +68,8 @@ const Home: React.FC = () => {
             <IonButton fill='outline' expand='block'><strong>Explora más</strong></IonButton>
           </section>
           <section className='TopTemp'>
-            <p><strong>----TOP DE LA TEMPORADA----</strong></p>
-            <ListItems Item={Item2}/>
+            <p><strong>---TOP DE LA TEMPORADA---</strong></p>
+            <ListItems item={Item2} />
           </section>
         </div>
       </IonContent>

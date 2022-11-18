@@ -3,6 +3,7 @@ import {
   IonApp,
   IonIcon,
   IonLabel,
+  IonNav,
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
@@ -12,10 +13,11 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import { homeOutline, searchOutline, heartOutline, personOutline, search } from 'ionicons/icons';
 import Home from './pages/Home';
-import Seach from './pages/Search';
+import Search from './pages/Search';
 import Favorites from './pages/Favorites';
 import Account from './pages/Account';
 import Bag from './pages/Bag';
+import Item from './pages/Item';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -36,47 +38,38 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import './theme/tabs.css';
+import { type } from 'os';
 
 setupIonicReact();
 
-const App: React.FC = () => (
+
+const App = () => (
   <IonApp>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route exact path="/Home">
-            <Home />
-          </Route>
-          <Route exact path="/Seach">
-            <Seach />
-          </Route>
-          <Route path="/Favorites">
-            <Favorites />
-          </Route>
-          <Route path="/Account">
-            <Account />
-          </Route>
-          <Route path="/Bag">
-            <Bag />
-          </Route>
-          <Route exact path="/">
-            <Redirect to="/Home" />
-          </Route>
+          <Redirect exact path='/' to='/App/Home'/>
+          <Route path="/App/Home" component={Home}/> 
+          <Route path="/App/Search" component={Search} />
+          <Route path="/App/Favorites" component={Favorites}/>
+          <Route path="/App/Account" component={Account} />
+          <Route path="/App/Bag" component={Bag}/>
+          <Route path="/App/Item/:id" component={Item}/>
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="Home" href="/Home">
+        <IonTabBar slot="bottom" translucent>
+          <IonTabButton tab="Home" href="/App/Home">
             <IonIcon icon={homeOutline} />
             <IonLabel>Inicio</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="Seach" href="/Seach">
+          <IonTabButton tab="Search" href="/App/Search">
             <IonIcon icon={searchOutline} />
             <IonLabel>Buscar</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="Favorites" href="/Favorites">
+          <IonTabButton tab="Favorites" href="/App/Favorites">
             <IonIcon icon={heartOutline} />
             <IonLabel>Favoritos</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab4" href="/Account">
+          <IonTabButton tab="tab4" href="/App/Account">
             <IonIcon icon={personOutline} />
             <IonLabel>Mi Cuenta</IonLabel>
           </IonTabButton>

@@ -1,7 +1,12 @@
+ion-tab-button{
+    font-size: 10px;
+}
+
 ion-tab-bar{
     --background: #ffffff;
     --color: black;
     --color-selected: Gray ;
     --border: none;
+
 }
 

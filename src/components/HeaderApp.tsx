@@ -10,13 +10,13 @@ export const HeaderApp: React.FC = () => {
     return (
         <IonHeader class="ion-no-border" translucent>
             <IonToolbar>
-                <div className='head'>
+                <div className='head'> 
                     <span className='logo'>
                         <IonImg src='/assets/Images/PNG/Logo-Black.png' alt='Rony Boutique' className='Logo'></IonImg>
                     </span>
                     <span className='icon'>
                        <IonTabButton className="bag" href="/App/Bag" >
-                            <IonIcon icon={bagRemoveOutline} className='bag' size="large"/>
+                            <IonIcon icon={bagRemoveOutline} size="large"/>
                        </IonTabButton>
                     </span>
                 </div>

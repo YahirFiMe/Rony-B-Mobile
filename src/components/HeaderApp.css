@@ -4,21 +4,25 @@
     text-align: center;
 }
 
+
+
 ion-toolbar{
     --color: #ffffff;
     --background: rgb(255, 255, 255);
     --border: none;
-    margin-bottom: 10px;
 }   
 
 .logo{
     height: 4rem;
     display: inline-flex;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .bag{
     --color: rgb(0, 0, 0);
+    --background-activated-opacity: 0%;
+    --background: none;
     position:fixed;
     margin-left: auto;
     right: 0;

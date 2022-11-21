@@ -16,7 +16,7 @@ type CardProps = {
 
 const Card = (props: CardProps) => {
     return (
-            <IonCard button routerLink={"/App/Item/"+props.id} routerDirection='forward' >
+            <IonCard button routerLink={"/App/Item/"+props.id} routerDirection='forward' mode="ios">
                 <img alt="Silhouette of mountains" src={props.src} />
                 <IonCardHeader>
                     <IonCardTitle>{props.title}</IonCardTitle>

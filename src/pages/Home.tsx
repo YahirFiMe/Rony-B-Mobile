@@ -20,13 +20,13 @@ const Home: React.FC = () => {
   }, [])
 
   const GetItems = () => {
-    Api.get('http://192.168.56.1:8080/api/GetProducts/2')
+    Api.get('http://192.168.100.52:8000/api/GetClothes/2')
       .then(res => res.data)
       .then(res => setItem(res))
   }
 
   const GetItems2 = () => {
-    Api.get('http://127.0.0.1:8000/api/GetProducts/2')
+    Api.get('http://192.168.100.52:8000/api/GetClothes/2')
       .then(res => res.data)
       .then(res => setItem2(res))
   }

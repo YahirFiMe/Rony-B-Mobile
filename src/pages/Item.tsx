@@ -6,6 +6,7 @@ import ShortHeaderApp from "../components/ShortHeaderApp";
 
 import './Universal.css';
 import './Item.css';
+import HeaderApp from "../components/HeaderApp";
 
 type Id = {
     id: string;
@@ -20,7 +21,7 @@ const Item: React.FC = () => {
     const [Item, setItem] = useState([])
 
     useEffect(() => {
-        Api.get('http://localhost:9000/api/Products/' + id)
+        Api.get('http://192.168.100.52:8000/api/Clothes/' + id)
             .then(res => res.data)
             .then(res => setItem(res));
     }, [])
@@ -28,7 +29,7 @@ const Item: React.FC = () => {
 
     return (
         <IonPage>
-            {/* <ShortHeaderApp /> */}
+             <HeaderApp/>
             <IonContent>
                 <div className='body'>
                     {Item.map((Item: {
@@ -36,10 +37,11 @@ const Item: React.FC = () => {
                         name: string;
                         description: string;
                         price: string;
+                        img: string;
                     }) => (
                         <>
                             <section key={Item.id}>
-                                <IonImg src="https://ss251.liverpool.com.mx/sm/1123336172.jpg" />
+                                <IonImg src={Item.img} />
                                 <p>
                                     <span className="title"> <strong>{Item.name}</strong><br /></span>
                                     <span className="description">{Item.description} <br /></span>

@@ -9,8 +9,8 @@ import '../pages/Universal.css';
 
 export const ShortHeaderApp: React.FC = () => {
     return (
-        <IonHeader class="ion-no-border" translucent>
-            <IonToolbar>
+        <IonHeader class="ion-no-border" className="short" mode="ios">
+            <IonToolbar className="Tool">
                 <IonButtons slot="start">
                     <IonButton routerLink="/App/Home" routerDirection="back" >
                         <IonIcon slot="icon-only" icon={arrowBack} ></IonIcon>

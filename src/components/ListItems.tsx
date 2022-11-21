@@ -14,7 +14,7 @@ const ListItems = ({ item }: Item) => {
             {item.map((item) => (
                 <IonItem key={item.id}>
                     <Card title={item.name} subtitle={'$' + item.price} text={item.description} id={item.id}
-                        src='https://ss251.liverpool.com.mx/sm/1123336172.jpg' />
+                        src={item.img} />
                 </IonItem>
             ))}
         </IonList>

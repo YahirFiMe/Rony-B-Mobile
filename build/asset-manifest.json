@@ -1,12 +1,7 @@
 {
   "files": {
-<<<<<<< Updated upstream
-    "main.css": "/static/css/main.6cc39a6a.css",
-    "main.js": "/static/js/main.b8065abc.js",
-=======
-    "main.css": "/static/css/main.d35df646.css",
-    "main.js": "/static/js/main.1199ee01.js",
->>>>>>> Stashed changes
+    "main.css": "/static/css/main.df5adc3c.css",
+    "main.js": "/static/js/main.f24c48d8.js",
     "static/js/738.111a98c2.chunk.js": "/static/js/738.111a98c2.chunk.js",
     "static/js/372.9d24fed2.chunk.js": "/static/js/372.9d24fed2.chunk.js",
     "static/js/856.e7d052d4.chunk.js": "/static/js/856.e7d052d4.chunk.js",
@@ -18,13 +13,8 @@
     "static/js/377.1265944b.chunk.js": "/static/js/377.1265944b.chunk.js",
     "service-worker.js": "/service-worker.js",
     "index.html": "/index.html",
-<<<<<<< Updated upstream
-    "main.6cc39a6a.css.map": "/static/css/main.6cc39a6a.css.map",
-    "main.b8065abc.js.map": "/static/js/main.b8065abc.js.map",
-=======
-    "main.d35df646.css.map": "/static/css/main.d35df646.css.map",
-    "main.1199ee01.js.map": "/static/js/main.1199ee01.js.map",
->>>>>>> Stashed changes
+    "main.df5adc3c.css.map": "/static/css/main.df5adc3c.css.map",
+    "main.f24c48d8.js.map": "/static/js/main.f24c48d8.js.map",
     "738.111a98c2.chunk.js.map": "/static/js/738.111a98c2.chunk.js.map",
     "372.9d24fed2.chunk.js.map": "/static/js/372.9d24fed2.chunk.js.map",
     "856.e7d052d4.chunk.js.map": "/static/js/856.e7d052d4.chunk.js.map",
@@ -36,12 +26,7 @@
     "377.1265944b.chunk.js.map": "/static/js/377.1265944b.chunk.js.map"
   },
   "entrypoints": [
-<<<<<<< Updated upstream
-    "static/css/main.6cc39a6a.css",
-    "static/js/main.b8065abc.js"
-=======
-    "static/css/main.d35df646.css",
-    "static/js/main.1199ee01.js"
->>>>>>> Stashed changes
+    "static/css/main.df5adc3c.css",
+    "static/js/main.f24c48d8.js"
   ]
 }

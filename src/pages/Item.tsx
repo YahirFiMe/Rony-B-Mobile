@@ -7,6 +7,7 @@ import ShortHeaderApp from "../components/ShortHeaderApp";
 import './Universal.css';
 import './Item.css';
 import HeaderApp from "../components/HeaderApp";
+import Select_Size from "../components/Select";
 
 type Id = {
     id: string;
@@ -21,7 +22,7 @@ const Item: React.FC = () => {
     const [Item, setItem] = useState([])
 
     useEffect(() => {
-        Api.get('http://192.168.100.52:8000/api/Clothes/' + id)
+        Api.get('https://apirony.000webhostapp.com/api/Clothes/' + id)
             .then(res => res.data)
             .then(res => setItem(res));
     }, [])
@@ -29,7 +30,7 @@ const Item: React.FC = () => {
 
     return (
         <IonPage>
-             <HeaderApp/>
+            <ShortHeaderApp />
             <IonContent>
                 <div className='body'>
                     {Item.map((Item: {
@@ -47,7 +48,7 @@ const Item: React.FC = () => {
                                     <span className="description">{Item.description} <br /></span>
                                     <span className="price">${Item.price} (IVA Incluido)</span>
                                 </p>
-
+                                <Select_Size Item_id={Item.id} />
                             </section>
                         </>
                     ))}

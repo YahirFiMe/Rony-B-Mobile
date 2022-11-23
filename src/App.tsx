@@ -1,14 +1,5 @@
 import { Redirect, Route } from 'react-router-dom';
-import {
-  IonApp,
-  IonIcon,
-  IonLabel,
-  IonNav,
-  IonRouterOutlet,
-  IonTabBar,
-  IonTabButton,
-  IonTabs,
-  setupIonicReact
+import { IonApp, IonIcon, IonLabel, IonNav, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs, setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { homeOutline, searchOutline, heartOutline, personOutline, search } from 'ionicons/icons';
@@ -48,13 +39,13 @@ const App = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Redirect exact path='/' to='/App/Home'/>
-          <Route path="/App/Home" component={Home}/> 
+          <Redirect exact path='/' to='/App/Home' />
+          <Route path="/App/Home" component={Home} />
           <Route path="/App/Search" component={Search} />
-          <Route path="/App/Favorites" component={Favorites}/>
+          <Route path="/App/Favorites" component={Favorites} />
           <Route path="/App/Account" component={Account} />
-          <Route path="/App/Bag" component={Bag}/>
-          <Route path="/App/Item/:id" component={Item}/>
+          <Route path="/App/Bag" component={Bag} />
+          <Route path="/App/Item/:id" component={Item} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom" translucent>
           <IonTabButton tab="Home" href="/App/Home">

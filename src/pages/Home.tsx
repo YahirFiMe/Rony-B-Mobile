@@ -20,13 +20,13 @@ const Home: React.FC = () => {
   }, [])
 
   const GetItems = () => {
-    Api.get('http://192.168.100.52:8000/api/GetClothes/2')
+    Api.get('https://apirony.000webhostapp.com/api/GetClothes/2')
       .then(res => res.data)
       .then(res => setItem(res))
   }
 
   const GetItems2 = () => {
-    Api.get('http://192.168.100.52:8000/api/GetClothes/2')
+    Api.get('https://apirony.000webhostapp.com/api/GetClothes/2')
       .then(res => res.data)
       .then(res => setItem2(res))
   }
@@ -36,7 +36,6 @@ const Home: React.FC = () => {
   return (
     <IonPage>
       <HeaderApp />
-      
       <IonContent fullscreen>
         <div className='body'>
           <section className='SectionHead'>

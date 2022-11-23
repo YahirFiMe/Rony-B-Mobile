@@ -10,6 +10,7 @@ ion-toolbar{
     --color: #ffffff;
     --background: rgb(255, 255, 255);
     --border: none;
+    max-height:max-content;
 }   
 
 .logo{
@@ -17,6 +18,7 @@ ion-toolbar{
     display: inline-flex;
     margin-top: 10px;
     margin-bottom: 10px;
+    position: static;
 }
 
 .bag{
@@ -27,6 +29,8 @@ ion-toolbar{
     margin-left: auto;
     right: 0;
     margin-right: 15px;
+    margin-bottom: auto;
+    top: 2rem;
 }
 
 .BButton{
@@ -39,5 +43,10 @@ ion-back-button{
     --color-hover:gray;
     --color:black;
     --background-hover-opacity: 0%;
+}
+
+.Spcace{
+    height: 0.5rem;
+    opacity: 0%;
 }
 /* ========== End Style Ion-Header ======== */

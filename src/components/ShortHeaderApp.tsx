@@ -18,7 +18,7 @@ export const ShortHeaderApp: React.FC = () => {
                 </IonButtons>
                 <IonButtons slot="end">
                     <IonButton >
-                        <IonIcon slot="icon-only" icon={bagRemoveOutline} ></IonIcon>
+                        <IonIcon slot="icon-only" icon={bagRemoveOutline} size="large" ></IonIcon>
                     </IonButton>
                 </IonButtons>
             </IonToolbar>

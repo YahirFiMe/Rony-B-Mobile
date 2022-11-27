@@ -8,25 +8,20 @@ import './HeaderApp.css';
 
 export const HeaderApp: React.FC = () => {
     return (
-        <IonHeader class="ion-no-border" translucent>
+        <IonHeader class="ion-no-border" className="short" mode="ios">
             <IonToolbar>
-                <div className='head'>
-                    <div className="Space">
-                        <p>de</p>
-                    </div>
-                    <span className='logo'>
-                        <IonImg src='/assets/Images/PNG/Logo-Black.png' alt='Rony Boutique' className='Logo'></IonImg>
-                    </span>
-                    <span className='icon'>
-                        <IonTabButton className="bag" href="/App/Bag" >
-                            <IonIcon icon={bagRemoveOutline} size="large" />
-                        </IonTabButton>
-                    </span>
-                    
-                </div>
+                <span className='logo'>
+                    <IonImg src='/assets/Images/PNG/Logo-Black.png' alt='Rony Boutique' className='Logo'></IonImg>
+                </span>
+                <IonButtons slot="end">
+                    <IonButton routerLink="/App/Bag">
+                        <IonIcon slot="icon-only" icon={bagRemoveOutline} size="large"/ >
+                    </IonButton>
+                </IonButtons>
             </IonToolbar>
         </IonHeader>
     );
 }
+
 
 export default HeaderApp;

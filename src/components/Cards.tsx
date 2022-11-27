@@ -1,32 +1,35 @@
-import { IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonNavLink } from "@ionic/react";
-import Item from "../pages/Item";
-import Search from '../pages/Search';
+import { IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonNavLink, IonList, IonItem } from "@ionic/react";
+
 
 import './Cards.css';
 
-
-type CardProps = {
-    title: string;
-    subtitle: string;
-    text: string;
-    src: string;
-    id: number;
-}
+type Clothes = {
+    Clothe: any[],
+    
+};
 
 
-const Card = (props: CardProps) => {
+const Card = ({ Clothe }: Clothes ) => {
+
+
     return (
-            <IonCard button routerLink={"/App/Item/"+props.id} routerDirection='forward' mode="ios">
-                <img alt="Silhouette of mountains" src={props.src} />
-                <IonCardHeader>
-                    <IonCardTitle>{props.title}</IonCardTitle>
-                    <IonCardSubtitle>{props.subtitle}</IonCardSubtitle>
-                </IonCardHeader>
+        <IonList>
+            {Clothe.map((Clothe) => (
+                <IonItem key={Clothe.id}>
+                    <IonCard button routerLink={"/App/Item/" + Clothe.id} routerDirection='forward' mode="ios">
+                        <img src={Clothe.img} />
+                        <IonCardHeader>
+                            <IonCardTitle>{Clothe.name}</IonCardTitle>
+                            <IonCardSubtitle>${Clothe.price}</IonCardSubtitle>
+                        </IonCardHeader>
 
-                <IonCardContent>
-                    <p>{props.text}</p>
-                </IonCardContent>
-            </IonCard>
+                        <IonCardContent>
+                            <p>{Clothe.description}</p>
+                        </IonCardContent>
+                    </IonCard>
+                </IonItem>
+            ))}
+        </IonList>
     )
 }
 

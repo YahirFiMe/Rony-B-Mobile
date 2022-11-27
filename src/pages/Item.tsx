@@ -1,21 +1,22 @@
-import { IonContent, IonHeader, IonImg, IonItem, IonList, IonPage, IonTitle, IonToolbar } from "@ionic/react";
-import { ReactFragment, useEffect, useState } from "react";
+import { IonContent, IonImg, IonPage, IonButton } from "@ionic/react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Api } from "../API/Api";
 import ShortHeaderApp from "../components/ShortHeaderApp";
-
 import './Universal.css';
 import './Item.css';
-import HeaderApp from "../components/HeaderApp";
 import Select_Size from "../components/Select";
+import { bagRemoveOutline } from "ionicons/icons";
+
 
 type Id = {
     id: string;
 }
 
+
+const Cart: any[] = [];
+
 const Item: React.FC = () => {
-
-
 
     let { id }: Id = useParams()
 
@@ -28,9 +29,10 @@ const Item: React.FC = () => {
     }, [])
 
 
+
     return (
         <IonPage>
-            <ShortHeaderApp />
+            <ShortHeaderApp Iconbutton={bagRemoveOutline} Router={"/App/Bag"} RouterDirection={"forward"} />
             <IonContent>
                 <div className='body'>
                     {Item.map((Item: {
@@ -39,16 +41,17 @@ const Item: React.FC = () => {
                         description: string;
                         price: string;
                         img: string;
-                    }) => (
+                    }, index) => (
                         <>
-                            <section key={Item.id}>
+                            <section key={index}>
                                 <IonImg src={Item.img} />
                                 <p>
                                     <span className="title"> <strong>{Item.name}</strong><br /></span>
                                     <span className="description">{Item.description} <br /></span>
                                     <span className="price">${Item.price} (IVA Incluido)</span>
                                 </p>
-                                <Select_Size Item_id={Item.id} />
+                                <Select_Size Item_id={Item.id}/>
+                               
                             </section>
                         </>
                     ))}

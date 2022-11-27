@@ -1,0 +1,16 @@
+.card{
+    height: 13rem;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.font-small{
+    font-size: 10px;
+}
+
+.img{
+    height: 10rem;
+    width: 10rem ;
+    margin-bottom: 1.3rem;
+}

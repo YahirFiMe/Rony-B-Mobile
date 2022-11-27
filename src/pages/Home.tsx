@@ -1,23 +1,27 @@
 import { Api } from '../API/Api';
-import { IonButton, IonContent, IonImg, IonItem, IonList, IonNavLink, IonPage, IonRouterOutlet} from '@ionic/react';
-import { useEffect, useState } from 'react';
+import { IonButton, IonContent, IonImg, IonItem, IonList, IonNavLink, IonPage, IonRouterOutlet } from '@ionic/react';
+import { useEffect, useReducer, useState } from 'react';
 import Search from '../pages/Search';
 import HeaderApp from '../components/HeaderApp';
-import ListItems from '../components/ListItems';
+import Card from '../components/Cards';
 import './Universal.css';
+import { Route } from 'react-router';
+import Bag from './Bag';
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from '../app/store'
 
-
+interface Clothe {
+  id: string,
+  src: string,
+  title: string,
+  subtitle: string,
+  text: string,
+}
 
 const Home: React.FC = () => {
 
   const [Item, setItem] = useState<any[]>([]);
   const [Item2, setItem2] = useState<any[]>([]);
-
-
-  useEffect(() => {
-    GetItems();
-    GetItems2();
-  }, [])
 
   const GetItems = () => {
     Api.get('https://apirony.000webhostapp.com/api/GetClothes/2')
@@ -31,6 +35,13 @@ const Home: React.FC = () => {
       .then(res => setItem2(res))
   }
 
+  useEffect(() => {
+    GetItems();
+    GetItems2();
+  }, [])
+
+  const Clothes: Clothe[] = Item;
+  const Clothes2: Clothe[] = Item2;
 
 
   return (
@@ -47,7 +58,9 @@ const Home: React.FC = () => {
           </section>
           <section className='TopTemp'>
             <p><strong>---TOP DE LA TEMPORADA---</strong></p>
-            <ListItems item={Item} />
+
+            <Card Clothe={Item} />
+
           </section>
           <section>
             <IonImg src='assets/images/resources/Gift.jpg' className='imgF' />
@@ -68,7 +81,7 @@ const Home: React.FC = () => {
           </section>
           <section className='TopTemp'>
             <p><strong>---TOP DE LA TEMPORADA---</strong></p>
-            <ListItems item={Item2} />
+            <Card Clothe={Item2} />
           </section>
         </div>
       </IonContent>

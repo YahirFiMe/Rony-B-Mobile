@@ -29,7 +29,6 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import './theme/tabs.css';
-import { type } from 'os';
 
 setupIonicReact();
 
@@ -40,12 +39,24 @@ const App = () => (
       <IonTabs>
         <IonRouterOutlet>
           <Redirect exact path='/' to='/App/Home' />
-          <Route path="/App/Home" component={Home} />
-          <Route path="/App/Search" component={Search} />
-          <Route path="/App/Favorites" component={Favorites} />
-          <Route path="/App/Account" component={Account} />
-          <Route path="/App/Bag" component={Bag} />
-          <Route path="/App/Item/:id" component={Item} />
+          <Route path="/App/Home">
+            <Home/>
+          </Route>
+          <Route path="/App/Search">
+            <Search/>
+          </Route>
+          <Route path="/App/Favprotes">
+            <Favorites/>
+          </Route>
+          <Route path="/App/Account">
+            <Account/>
+          </Route>
+          <Route path="/App/Item/:id">
+            <Item/>
+          </Route>
+          <Route path="/App/Bag">
+            <Bag/>
+          </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom" translucent>
           <IonTabButton tab="Home" href="/App/Home">

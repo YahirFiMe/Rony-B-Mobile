@@ -16,7 +16,7 @@ type props  = {
 }
 
 
-export const ShortHeaderApp = ({Iconbutton,Router,RouterDirection}: props) => {
+export const ShortHeaderAppBag = ({Iconbutton,Router,RouterDirection}: props) => {
 
     const useAppDispatch: () => AppDispatch = useDispatch;
     const Dis = useAppDispatch()
@@ -31,7 +31,7 @@ export const ShortHeaderApp = ({Iconbutton,Router,RouterDirection}: props) => {
                     </IonButton>
                 </IonButtons>
                 <IonButtons slot="end" >
-                    <IonButton  routerLink={Router} routerDirection={RouterDirection} >
+                    <IonButton  routerLink={Router} routerDirection={RouterDirection} onClick={() => Dis(cleanCart(1))} >
                         <IonIcon slot="icon-only" icon={Iconbutton} size="large" ></IonIcon>
                     </IonButton>
                 </IonButtons>
@@ -40,4 +40,4 @@ export const ShortHeaderApp = ({Iconbutton,Router,RouterDirection}: props) => {
     );
 }
 
-export default ShortHeaderApp;
+export default ShortHeaderAppBag;

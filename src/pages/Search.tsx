@@ -1,33 +1,25 @@
-import {
-  IonBackButton,
-  IonButton,
-  IonContent,
-  IonHeader,
-  IonInfiniteScroll,
-  IonInfiniteScrollContent,
-  IonItem,
-  IonLabel,
-  IonList,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-} from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonToolbar } from '@ionic/react';
+import ShortHeaderApp from '../components/ShortHeaderApp';
+import Api from '../API/Api';
+import { bagRemoveOutline } from "ionicons/icons";
+
+import "./Search.css"
+import { useState } from 'react';
+
+import { useSelector } from 'react-redux';
+import { RootState } from '../app/store';
 
 
-import "./Search.css";
 
 
 const Search: React.FC = () => {
 
+
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-         
-        </IonToolbar>
-      </IonHeader>
+      <ShortHeaderApp Iconbutton={bagRemoveOutline} Router={"Bag"} RouterDirection={"forward"}/>
       <IonContent>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias repudiandae pariatur iure obcaecati neque reprehenderit. Nemo impedit dignissimos consequatur eius nam, quibusdam maiores repellat recusandae numquam aliquid eos eum in!</p>
+       
       </IonContent>
     </IonPage>
   );

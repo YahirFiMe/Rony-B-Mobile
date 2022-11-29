@@ -1,23 +1,9 @@
 import { Api } from '../API/Api';
 import { IonButton, IonContent, IonImg, IonItem, IonList, IonNavLink, IonPage, IonRouterOutlet } from '@ionic/react';
-import { useEffect, useReducer, useState } from 'react';
-import Search from '../pages/Search';
+import { useEffect, useState } from 'react';
 import HeaderApp from '../components/HeaderApp';
 import Card from '../components/Cards';
 import './Universal.css';
-import { Route } from 'react-router';
-import Bag from './Bag';
-import { useDispatch } from 'react-redux';
-import { AppDispatch } from '../app/store'
-
-interface Clothe {
-  id: string,
-  src: string,
-  title: string,
-  subtitle: string,
-  text: string,
-}
-
 const Home: React.FC = () => {
 
   const [Item, setItem] = useState<any[]>([]);
@@ -39,10 +25,6 @@ const Home: React.FC = () => {
     GetItems();
     GetItems2();
   }, [])
-
-  const Clothes: Clothe[] = Item;
-  const Clothes2: Clothe[] = Item2;
-
 
   return (
     <IonPage>

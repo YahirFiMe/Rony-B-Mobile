@@ -8,15 +8,15 @@ import { AppDispatch } from '../app/store'
 import './HeaderApp.css';
 import '../pages/Universal.css';
 
-type props  = {
-    Iconbutton:string;
-    Router:string;
+type props = {
+    Iconbutton: string;
+    Router: string;
     RouterDirection: any;
-    
+
 }
 
 
-export const ShortHeaderApp = ({Iconbutton,Router,RouterDirection}: props) => {
+export const ShortHeaderApp = ({ Iconbutton, Router, RouterDirection }: props) => {
 
     const useAppDispatch: () => AppDispatch = useDispatch;
     const Dis = useAppDispatch()
@@ -26,12 +26,12 @@ export const ShortHeaderApp = ({Iconbutton,Router,RouterDirection}: props) => {
         <IonHeader class="ion-no-border" className="short" mode="ios">
             <IonToolbar className="Tool">
                 <IonButtons slot="start">
-                    <IonButton routerLink="/App/Home" routerDirection="back" >
-                        <IonIcon slot="icon-only" icon={arrowBack} ></IonIcon>
-                    </IonButton>
+                    <IonBackButton text={''} icon={arrowBack}>
+                        <IonIcon slot="icon-only"  ></IonIcon>
+                    </IonBackButton>
                 </IonButtons>
                 <IonButtons slot="end" >
-                    <IonButton  routerLink={Router} routerDirection={RouterDirection} >
+                    <IonButton routerLink={Router} routerDirection={RouterDirection} >
                         <IonIcon slot="icon-only" icon={Iconbutton} size="large" ></IonIcon>
                     </IonButton>
                 </IonButtons>

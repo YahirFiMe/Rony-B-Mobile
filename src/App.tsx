@@ -42,10 +42,8 @@ const App = () => (
           <Route path="/App/Home">
             <Home/>
           </Route>
-          <Route path="/App/Search">
-            <Search/>
-          </Route>
-          <Route path="/App/Favprotes">
+          <Route path="/App/Search" component={Search} />
+          <Route path="/App/Favorites">
             <Favorites/>
           </Route>
           <Route path="/App/Account">
@@ -63,18 +61,18 @@ const App = () => (
             <IonIcon icon={homeOutline} />
             <IonLabel>Inicio</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="Search" href="/App/Search">
+          {/* <IonTabButton tab="Search" href="/App/Search">
             <IonIcon icon={searchOutline} />
             <IonLabel>Buscar</IonLabel>
-          </IonTabButton>
+          </IonTabButton> */}
           <IonTabButton tab="Favorites" href="/App/Favorites">
             <IonIcon icon={heartOutline} />
             <IonLabel>Favoritos</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab4" href="/App/Account">
+          {/* <IonTabButton tab="tab4" href="/App/Account">
             <IonIcon icon={personOutline} />
             <IonLabel>Mi Cuenta</IonLabel>
-          </IonTabButton>
+          </IonTabButton> */}
         </IonTabBar>
       </IonTabs>
     </IonReactRouter>

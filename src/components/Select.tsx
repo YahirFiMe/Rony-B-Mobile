@@ -1,7 +1,6 @@
 import React, { useEffect, useReducer, useState } from 'react';
 import { IonItem, IonList, IonLabel, IonSelect, IonSelectOption, IonButton } from '@ionic/react';
 import { Api } from '../API/Api';
-import { useParams } from 'react-router';
 import { addToCart } from '../app/slices/ShoppingSlice';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../app/store'
@@ -28,7 +27,6 @@ const compareWith = (o1: Size, o2: Size) => {
 function Select_Size({ Item_id }: id) {
   const [Size, setSize] = useState({});
   const [Item, setItem] = useState([]);
-  const [Products, setProducts] = useState([])
 
 
 

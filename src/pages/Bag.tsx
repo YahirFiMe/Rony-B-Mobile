@@ -1,33 +1,42 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonLabel } from '@ionic/react';
-import './Bag.css';
+import { IonContent, IonPage, IonList, IonItem } from '@ionic/react';
 import { ShortHeaderAppBag } from '../components/ShortHeaderAppBag';
-import { trashOutline } from "ionicons/icons";
 import CartItem from '../components/CartItem'
+
+import './Bag.css';
+
 import { useSelector } from 'react-redux';
 import { RootState } from '../app/store';
-import { cleanCart, CartTotal } from '../app/slices/ShoppingSlice';
-import { useDispatch } from 'react-redux';
-import { AppDispatch } from '../app/store'
 
 
 
 const Bag: React.FC = () => {
 
   const { Cart: Cart } = useSelector((state: RootState) => state.Cart);
+  let Total = Cart.reduce((total: number, item: { price: number }) => (total += item.price), 0);
 
-  const useAppDispatch: () => AppDispatch = useDispatch;
-  const Dis = useAppDispatch()
+  const isEmpty = (Arr: any) => {
+    if (Arr == 0) {
+      return ( 
+ 
+    <div className='isEmpty' >
+      <p>¡Tu Carrito esta Vacio!</p>
+      <br />
+      {/* <IonImg src='../../public/assets/Images/icon/bolsita_triste.svg' alt='Bolsita Triste' /> */}
+    </div>
 
-  
+      )
+    }
+  }
 
   return (
     <IonPage>
-      <ShortHeaderAppBag Iconbutton={trashOutline} Router={"/"} RouterDirection={null} />
+      <ShortHeaderAppBag Total={Total} />
       <IonContent fullscreen>
         <IonList className='list'>
+          {isEmpty(Cart.length)}
           {Cart?.map((Item, index) => (
-            <IonItem>
-              <CartItem Item={Item} key={index}/>
+            <IonItem key={index}>
+              <CartItem Item={Item} />
             </IonItem>
           ))}
         </IonList>

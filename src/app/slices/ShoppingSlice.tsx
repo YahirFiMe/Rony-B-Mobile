@@ -39,15 +39,12 @@ export const CartSlice = createSlice({
       state.Cart = [];
     },
 
-    CartTotal: (state) => {
-      const total = state.Cart.reduce((Total: any, Item: any) => {Total += Item.price})
-    }
 
   },
 },
 )
 
-export const { addToCart, removeFromCart, cleanCart, CartTotal } = CartSlice.actions
+export const { addToCart, removeFromCart, cleanCart } = CartSlice.actions
 
 // Action creators are generated for each case reducer function
 

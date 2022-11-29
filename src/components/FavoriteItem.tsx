@@ -6,9 +6,9 @@ import { closeOutline, eyeOutline } from "ionicons/icons";
 
 import './CartItem.css'
 
-import { removeFromCart} from '../app/slices/ShoppingSlice';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../app/store'
+import { removeFromFavorites } from '../app/slices/FavoritesSlice';
 
 
 type item = {
@@ -18,7 +18,6 @@ type item = {
         img: string;
         price: number;
         description: string;
-        size: string;
     };
 }
 
@@ -28,20 +27,18 @@ const CartItem = ({ Item }: item) => {
     const useAppDispatch: () => AppDispatch = useDispatch;
     const Dis = useAppDispatch()
 
-
     return (
         <IonCard className='card'>
             <img alt={Item.name} src={Item.img} className="img" />
             <IonCardHeader>
                 <IonCardTitle className='title'>{Item.name}</IonCardTitle>
                 <IonCardSubtitle className='font-small'>${Item.price}</IonCardSubtitle>
-                <IonCardSubtitle className='font-small'>Talla: {Item.size}</IonCardSubtitle>
             </IonCardHeader>
 
             <IonCardContent className='font-small'>
                 {Item.description} <br/>
 
-                <IonButton fill="clear" onClick={() => {Dis(removeFromCart(Item))}} >
+                <IonButton fill="clear" onClick={() => {Dis(removeFromFavorites(Item))}} >
                     <IonIcon slot='icon-only' icon={closeOutline} />
                 </IonButton>
 

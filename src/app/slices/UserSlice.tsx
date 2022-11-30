@@ -27,6 +27,6 @@ export const {  } = UserSlice.actions
 
 export default UserSlice.reducer
 
-export const SelectUser = () = (dispacth:any) => {
-  Api.get() 
-}
+// export const SelectUser = () = (dispacth:any) => {
+//   Api.get() 
+// }

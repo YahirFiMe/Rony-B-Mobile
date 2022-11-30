@@ -36,7 +36,7 @@ const Home: React.FC = () => {
             <h3><b>COLECCION DE INVIERNO</b></h3>
             <p> Encuenta en RONY BOUTIQUE los mejores estilos de la temporada, abrigos, bufandas,
               sueteres, y gorros en tendencia </p>
-            <IonButton fill='outline' expand='block' href='/App/Search'><strong>Descubre más</strong></IonButton>
+            <IonButton fill='outline' expand='block' href='/App/Search' disabled><strong>Descubre más</strong></IonButton>
           </section>
           <section className='TopTemp'>
             <p><strong>---TOP DE LA TEMPORADA---</strong></p>
@@ -48,7 +48,7 @@ const Home: React.FC = () => {
             <IonImg src='assets/images/resources/Gift.jpg' className='imgF' />
             <h3><b>LA GUIA DE REGALOS DE RONY BOUTIQUE</b></h3>
             <p> Encuentra el regalo perfecto en nuestra seleccion exclusiva de las mejores piezas del año </p>
-            <IonButton fill='outline' expand='block'><strong>Explora más</strong></IonButton>
+            <IonButton fill='outline' expand='block' disabled ><strong>Explora más</strong></IonButton>
           </section>
           <IonList lines='full'>
             <IonItem>
@@ -59,7 +59,7 @@ const Home: React.FC = () => {
             <IonImg src='assets/images/resources/Shoes.jpg' className='imgF' />
             <h3><b>NOVEDADES EN TENIS Y ZAPATOS</b></h3>
             <p> Encuentra todo lo que buscas en nuestra seleccion de calzado, la coleccion de RONY BOUTIQUE siempre con las novedades del momento </p>
-            <IonButton fill='outline' expand='block'><strong>Explora más</strong></IonButton>
+            <IonButton fill='outline' expand='block' disabled ><strong>Explora más</strong></IonButton>
           </section>
           <section className='TopTemp'>
             <p><strong>---TOP DE LA TEMPORADA---</strong></p>

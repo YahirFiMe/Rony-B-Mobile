@@ -62,7 +62,8 @@ export const ShortHeaderAppBag = ({ Total }: props) => {
                                     handler: () => {
                                         console.log('Venta enviada');
                                         RegistrerSale();
-                                        SaleComplete('top')
+                                        SaleComplete('top');
+                                        cleanCart(1);
                                     },
                                 }
                             ],
@@ -138,7 +139,7 @@ export const ShortHeaderAppBag = ({ Total }: props) => {
                 amount: 1,
                 price_u: Item.price,
                 total: Item.price
-            }).then(res => console.log(res)).then(e => console.log(e))
+            }).then(res => console.log(res.status)).catch(e => console.log(e))
 
             // fetch('https://apirony.000webhostapp.com/api/createdetailsale', {
             //     method: 'POST',
